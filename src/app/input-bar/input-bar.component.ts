@@ -7,12 +7,15 @@ import { Component } from '@angular/core';
 })
 export class InputBarComponent {
     tasks: string[] = [];
+    isEditing: boolean = false;
 
     onInput(inputEl: HTMLInputElement) {
-        this.tasks.push(inputEl.value);
-
-        console.log(this.tasks);
-
-        inputEl.value = '';
+        if (!inputEl.value) {
+            return;
+        } else {
+            this.tasks.push(inputEl.value);
+            console.log(this.tasks);
+            inputEl.value = '';
+        }
     }
 }
