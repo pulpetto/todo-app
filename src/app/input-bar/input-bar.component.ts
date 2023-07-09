@@ -6,16 +6,14 @@ import { Component } from '@angular/core';
     styleUrls: ['./input-bar.component.css'],
 })
 export class InputBarComponent {
-    tasks: string[] = [];
-    isEditing: boolean = false;
+    note: string = '';
 
-    onInput(inputEl: HTMLInputElement) {
-        if (!inputEl.value) {
+    onTaskAdded() {
+        if (this.note === '') {
             return;
         } else {
-            this.tasks.push(inputEl.value);
-            console.log(this.tasks);
-            inputEl.value = '';
+            // emitter stuff
+            this.note = '';
         }
     }
 }

@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-    title = 'todoApp';
+    tasks: string[] = [];
+
+    addNoteToTasks(note: string) {
+        this.tasks.push(note);
+    }
 }

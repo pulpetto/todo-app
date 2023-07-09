@@ -8,8 +8,8 @@
     />
 </div> -->
 <div class="flex items-center justify-center gap-2">
-    <input type="text" placeholder="Fe: make poop" #taskInput />
-    <button class="bg-white border-black" (click)="onInput(taskInput)">
+    <input [(ngModel)]="note" type="text" placeholder="Fe: make poop" />
+    <button class="bg-white border-black" type="button" (click)="onTaskAdded()">
         Add
     </button>
 </div>
