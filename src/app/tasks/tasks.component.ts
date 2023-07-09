@@ -5,4 +5,12 @@ import { Component, Input } from '@angular/core';
     templateUrl: './tasks.component.html',
     styleUrls: ['./tasks.component.css'],
 })
-export class TasksComponent {}
+export class TasksComponent {
+    @Input() tasks: string[] = [];
+
+    editTask(task: string) {
+        console.log('edit time');
+        // Implement the logic to handle editing the task
+        // For example, open a dialog or toggle an edit mode
+    }
+}

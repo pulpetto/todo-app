@@ -3,5 +3,5 @@
         class="mb-6"
         (TaskAddedEmmit)="addNoteToTasks($event)"
     ></app-input-bar>
-    <app-tasks></app-tasks>
+    <app-tasks [tasks]="tasks"></app-tasks>
 </div>
