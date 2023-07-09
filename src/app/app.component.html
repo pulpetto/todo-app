@@ -1,4 +1,7 @@
 <div class="bg-neutral-800 h-screen flex justify-center flex-col items-center">
-    <app-input-bar class="mb-6"></app-input-bar>
+    <app-input-bar
+        class="mb-6"
+        (onTaskAddedEmmit)="addNoteToTasks($event)"
+    ></app-input-bar>
     <app-tasks></app-tasks>
 </div>

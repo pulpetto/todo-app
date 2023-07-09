@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'app-input-bar',
@@ -7,12 +7,14 @@ import { Component } from '@angular/core';
 })
 export class InputBarComponent {
     note: string = '';
+    @Output() onTaskAddedEmmit: EventEmitter<string> =
+        new EventEmitter<string>();
 
     onTaskAdded() {
         if (this.note === '') {
             return;
         } else {
-            // emitter stuff
+            this.onTaskAddedEmmit.emit(this.note);
             this.note = '';
         }
     }

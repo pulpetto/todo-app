@@ -10,5 +10,6 @@ export class AppComponent {
 
     addNoteToTasks(note: string) {
         this.tasks.push(note);
+        console.log(this.tasks);
     }
 }
