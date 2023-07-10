@@ -6,10 +6,14 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-    tasks: string[] = [];
+    tasks: { id: number; note: string }[] = [];
 
     addNoteToTasks(note: string) {
-        this.tasks.push(note);
-        console.log(this.tasks);
+        const newTask = {
+            id: Date.now(),
+            note: note,
+        };
+
+        this.tasks.push(newTask);
     }
 }

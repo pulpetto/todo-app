@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['./tasks.component.css'],
 })
 export class TasksComponent {
-    @Input() tasks: string[] = [];
+    @Input() tasks: { id: number; note: string }[] = [];
 
     editTask(task: string) {
         console.log('edit time');
