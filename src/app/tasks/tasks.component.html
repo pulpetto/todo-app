@@ -1,9 +1,21 @@
-<!-- <div>
-    <div>Bench 225lbs for 8 reps</div>
-    <button></button>
-</div> -->
+<div class="flex items-center gap-2 mb-2" *ngFor="let task of tasks">
+    <div
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-neutral-700 leading-tight focus:outline-none focus:shadow-outline"
+    >
+        {{ task }}
+    </div>
 
-<div *ngFor="let task of tasks">
-    <span>{{ task }}</span>
-    <button (click)="editTask(task)">Edit</button>
+    <button
+        class="bg-neutral-600 hover:bg-neutral-700 text-white font-bold py-2 px-4 rounded"
+        (click)="editTask(task)"
+    >
+        Edit
+    </button>
+
+    <button
+        class="bg-neutral-600 hover:bg-neutral-700 text-white font-bold py-2 px-4 rounded"
+        (click)="editTask(task)"
+    >
+        Delete
+    </button>
 </div>
