@@ -9,11 +9,16 @@
 </div> -->
 <div class="flex items-center justify-center gap-2">
     <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-neutral-700 leading-tight focus:outline-none focus:shadow-outline"
         [(ngModel)]="note"
         type="text"
         placeholder="Enter you task here..."
     />
-    <button class="bg-white border-black" type="button" (click)="onTaskAdded()">
+    <button
+        class="bg-neutral-600 hover:bg-neutral-700 text-white font-bold py-2 px-4 rounded"
+        type="button"
+        (click)="onTaskAdded()"
+    >
         Add
     </button>
 </div>
